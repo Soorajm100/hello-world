@@ -1,0 +1,39 @@
+
+
+<div class="form-group">
+<label for="title" style="font-size: xx-large;">Title</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" required value="<%= article.title%>" name="title" id="title" class="form-control" style="height:20px;width:300px;">
+
+</div>
+<br/><br/>
+<div class="form-group">
+    <p>
+<label for="description" style="font-size: xx-large;">Description</label>&nbsp;&nbsp;
+<textarea name="description" id="description" class="form-control" style="height:50px;width:300px;"><%= article.description%></textarea>
+</p>
+</div>
+<br/><br/>
+<div class="form-group">
+<label for="markdown" style="font-size: xx-large;">Markdown</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<textarea name="markdown" id="markdown" class="form-control" style="height:50px;width:300px;" required><%= article.markdown %></textarea>
+
+</div>
+<br/><br/>
+<button style=" background-color: #4CAF50; 
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+"><a href="/" class="bt" style="text-decoration:none; font-weight: bold;color: white;">Cancel</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="submit" class=" btn" style="  background-color: #4CAF50; 
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;"> Save</button>

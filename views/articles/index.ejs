@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Spot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="./css/fine.css">-->
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/fine.css">
+
+   <script type="text/javascript" src="nav.js"></script>
+   
+  
+<link rel="stylesheet" href="./css/search.css"> 
+</head>
+
+
+<body>
+   
+    
+   
+        
+    <div class="container">
+        <div id="topframe"><h1 style="text-align: center; color:cyan">BLOG SPOT</h1></div>
+        <span class="menu-icon">&#9776;</span>
+      <div class="wrap">
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="What are you looking for?">
+       <button type="submit" class="searchButton">
+         <i class="fa fa-search"></i>
+      </button>
+    </div>
+ </div>
+ <div class="menu-container">
+    <span class="closebtn"  id="navbar" onclick="closemenu()">&times;</span>
+    <div class="menu-content">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">ADDRESS</a>
+        <a href="#">CONTACT NUMBER</a>
+        <a href="#">LOGIN</a>
+    </div>
+</div>
+
+
+
+         
+
+       <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <a href="/articles/new" class="btn btn-success">New Article</a>
+        <% articles.forEach(article =>{ %>
+            <br/><br/>
+        <div class="card">
+            <div class="card-body" style="background-color:chartreuse;">
+                <div class="card-title">
+                    <%= article.title %>
+                </div>
+                <div class="card-subtitle text-muted mb-2">
+                    <%= article.created.toLocaleDateString() %>
+                </div>
+                <div class="card-text mb-2">
+                    <%= article.description %>
+                </div>
+                <a href="/articles/<%= article.slug %>" class="btn btn-primary">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+                    <button class="btn btn-danger" type="submit">Delete </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </form>
+                <a href="articles/edit/<%= article.id %>" class="btn btn-primary"> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" style="height:40px; width:60px">&#128077;</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-danger" style="height:40px; width:60px">&#128078;</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <button class="btn btn-primary" style="height:40px; width:60px">&#128488;</button>
+            </div>
+          
+        </div>
+        <%}) %>
+        
+    </div>
+
+   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>-->
+
+
+              
+</body>
+
+
+</html> 
